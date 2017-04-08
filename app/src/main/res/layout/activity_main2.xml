@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent"
+   >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Welcome!!"
+                android:textStyle="bold"
+                android:textSize="30dp"
+                android:gravity="center"
+                android:layout_above="@+id/School"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="36dp" />
+
+            <Button
+                android:id="@+id/Hospital"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:layout_marginTop="321dp"
+                android:padding="20dp"
+                android:text="Hospital"
+                android:background="@drawable/button"
+                android:drawableTop="@drawable/doctorstethoscope"
+                android:layout_alignParentTop="true"
+                android:layout_alignLeft="@+id/School"
+                android:layout_alignStart="@+id/School" />
+
+            <Button
+                android:id="@+id/dia"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:text="Diagnostics"
+                android:background="@drawable/button"
+                android:layout_alignTop="@+id/Hospital"
+                android:padding="15dp"
+                android:drawableTop="@drawable/healthcare"
+                android:layout_alignLeft="@+id/uni"
+                android:layout_alignStart="@+id/uni" />
+
+            <Button
+                android:id="@+id/Shpng"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:layout_marginTop="61dp"
+                android:text="Shopping Mall"
+                android:drawableTop="@drawable/shoppers"
+                android:padding="15dp"
+                android:background="@drawable/button"
+                android:layout_below="@+id/Hospital"
+                android:layout_alignLeft="@+id/Hospital"
+                android:layout_alignStart="@+id/Hospital" />
+
+            <Button
+                android:id="@+id/tourist"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:text="Tourist Spot"
+                android:background="@drawable/button"
+                android:drawableTop="@drawable/flagspot"
+                android:padding="15dp"
+                android:layout_marginTop="50dp"
+                android:layout_below="@+id/Shpng"
+
+                android:layout_alignLeft="@+id/Shpng"
+                android:layout_alignStart="@+id/Shpng" />
+
+            <Button
+                android:id="@+id/res"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:text="Restaurents"
+                android:drawableTop="@drawable/coffeecup"
+                android:layout_marginRight="41dp"
+                android:padding="10dp"
+                android:background="@drawable/button"
+                android:layout_marginEnd="41dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+
+            <Button
+                android:id="@+id/uni"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:text="University"
+                android:padding="15dp"
+                android:background="@drawable/button"
+                android:layout_alignTop="@+id/Shpng"
+                android:drawableTop="@drawable/diploma"
+                android:layout_alignLeft="@+id/res"
+                android:layout_alignStart="@+id/res" />
+
+            <Button
+                android:id="@+id/College"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:text="College"
+                android:layout_marginBottom="69dp"
+                android:drawableTop="@drawable/collegegraduation"
+                android:background="@drawable/button"
+                android:padding="15dp"
+                android:layout_above="@+id/dia"
+                android:layout_alignLeft="@+id/dia"
+                android:layout_alignStart="@+id/dia" />
+
+            <Button
+                android:id="@+id/School"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:drawableTop="@drawable/pencil"
+                android:text="School"
+                android:padding="20dp"
+                android:background="@drawable/button"
+                android:layout_alignBaseline="@+id/College"
+                android:layout_alignBottom="@+id/College"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="26dp"
+                android:layout_marginStart="26dp" />
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+
+</RelativeLayout>
