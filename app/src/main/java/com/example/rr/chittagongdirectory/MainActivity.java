@@ -28,5 +28,19 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        clg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(MainActivity.this,ClgActivity.class);
+                startActivity(intent);
+            }
+        });
+        shpng.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent= new Intent(MainActivity.this,MarketActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }

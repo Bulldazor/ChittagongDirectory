@@ -18,7 +18,8 @@
         </activity>
         <activity android:name=".MainActivity" />
         <activity android:name=".SklActivity" />
-        <activity android:name=".HospitalActivity"></activity>
+        <activity android:name=".MarketActivity" />
+        <activity android:name=".ClgActivity"></activity>
     </application>
 
 </manifest>

@@ -12,14 +12,16 @@ import android.widget.Toast;
  * Created by R.R on 4/9/2017.
  */
 
-public class Hos extends BaseExpandableListAdapter {
+public class Clg extends BaseExpandableListAdapter {
 
-    String groupName[]=
+            String groupName[]= {"Bangla Curriculum","National Curriculum"};
+
+            String[][]childernName={{"1.Chittagong College  ","2.Govt. Mohsin College  ","3.Govt. City College  ","4.Govt Women College  ","5.BAWA College "},{"1.CCPC ","2.BAF Shahin College","3. Meron Sun College "}};
 
 
     Context context;
 
-    public Hos (Context context){
+    public Clg(Context context){
         this.context=context;
     }
 
@@ -64,7 +66,7 @@ public class Hos extends BaseExpandableListAdapter {
         TextView textView=new TextView(context);
         textView.setText(groupName[groupPosition]);
         textView.setPadding(100,0,0,0);
-        textView.setTextColor(Color.BLACK);
+        textView.setTextColor(Color.BLUE);
         textView.setTextSize(30);
         return textView;
     }
@@ -74,7 +76,7 @@ public class Hos extends BaseExpandableListAdapter {
         final TextView textView=new TextView(context);
         textView.setText(childernName[groupPosition][childPosition]);
         textView.setPadding(100,0,0,0);
-        textView.setTextColor(Color.RED);
+        textView.setTextColor(Color.BLACK);
         textView.setTextSize(25);
         textView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -92,4 +94,4 @@ public class Hos extends BaseExpandableListAdapter {
     }
 }
 
-}
+
