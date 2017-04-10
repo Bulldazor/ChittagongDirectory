@@ -19,7 +19,8 @@
         <activity android:name=".MainActivity" />
         <activity android:name=".SklActivity" />
         <activity android:name=".MarketActivity" />
-        <activity android:name=".ClgActivity"></activity>
+        <activity android:name=".ClgActivity" />
+        <activity android:name=".UniversityActivity"></activity>
     </application>
 
 </manifest>

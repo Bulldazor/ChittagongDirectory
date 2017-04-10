@@ -4,16 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/market"
-
-    tools:context="com.example.rr.chittagongdirectory.MarketActivity">
+    android:background="@drawable/background"
+    tools:context="com.example.rr.chittagongdirectory.UniversityActivity">
 
     <ListView
-        android:id="@+id/Lisst"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="8dp"
         android:dividerHeight="2dp"
-        android:divider="@android:color/black"
-        android:layout_centerHorizontal="true" />
+        android:divider="@android:color/holo_blue_dark"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp"
+        android:id="@+id/listViewUni"/>
 </RelativeLayout>
