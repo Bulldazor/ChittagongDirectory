@@ -49,5 +49,33 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        hos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent in = new Intent(MainActivity.this,HospitalActivity.class);
+                startActivity(in);
+            }
+        });
+        dia.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent= new Intent(MainActivity.this,DiaActivity.class);
+                startActivity(intent);
+            }
+        });
+        res.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent in = new Intent(MainActivity.this,ResActivity.class);
+                startActivity(in);
+            }
+        });
+        spot.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent= new Intent(MainActivity.this,TourActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }

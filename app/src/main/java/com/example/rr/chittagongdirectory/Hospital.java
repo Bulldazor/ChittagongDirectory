@@ -10,24 +10,27 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 /**
- * Created by R.R on 4/10/2017.
+ * Created by R.R on 4/12/2017.
  */
 
-public class Versity extends BaseAdapter {
+public class Hospital extends BaseAdapter {
 
-    String versity[];
-    int picture[];
+    String hospital[];
+    int pic_of_hospital[];
     LayoutInflater inflater;
-    public Versity(Context context,String[]versity,int[]picture){
-        this.versity=versity;
-        this.picture=picture;
+    public Hospital(Context context,String[]hospital,int[]pic_of_hospital){
+        this.hospital=hospital;
+        this.pic_of_hospital=pic_of_hospital;
         inflater=(LayoutInflater.from(context));
+
     }
+
+
 
 
     @Override
     public int getCount() {
-        return versity.length;
+        return hospital.length;
     }
 
     @Override
@@ -42,15 +45,16 @@ public class Versity extends BaseAdapter {
 
     @Override
     public View getView(int position, View view, ViewGroup parent) {
-
-
-        view=inflater.inflate(R.layout.versity_item,parent,false);
-        TextView textView=(TextView)view.findViewById(R.id.textViewUni);
-        ImageView imageView= (ImageView)view.findViewById(R.id.imageViewUni);
-        textView.setText(versity[position]);
+        view=inflater.inflate(R.layout.hospital_item,parent,false);
+        TextView textView=(TextView)view.findViewById(R.id.Hospital);
+        ImageView imageView= (ImageView)view.findViewById(R.id.CMC);
+        textView.setText(hospital[position]);
         textView.setTextColor(Color.RED);
-        imageView.setImageResource(picture[position]);
+        imageView.setImageResource(pic_of_hospital[position]);
 
         return view;
-}
+
+
+
+    }
 }

@@ -1,7 +1,9 @@
 package com.example.rr.chittagongdirectory;
 
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.widget.ListView;
 
 public class UniversityActivity extends AppCompatActivity {
@@ -11,10 +13,24 @@ public class UniversityActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setHomeButtonEnabled(true);
+        actionBar.setDisplayHomeAsUpEnabled(true);
+        actionBar.setTitle("University List");
         setContentView(R.layout.activity_university);
         listViewUni=(ListView)findViewById(R.id.listViewUni);
         Versity versity= new Versity(getApplicationContext(),Versity,picture);
         listViewUni.setAdapter(versity);
 
+    }
+    public boolean onOptionItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                //app icon in action bar clicked;goto parent activity
+                this.finish();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 }

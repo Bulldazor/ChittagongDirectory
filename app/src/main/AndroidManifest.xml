@@ -4,9 +4,9 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/logo"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".SplashActivity">
@@ -16,11 +16,32 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity" />
-        <activity android:name=".SklActivity" />
-        <activity android:name=".MarketActivity" />
-        <activity android:name=".ClgActivity" />
-        <activity android:name=".UniversityActivity"></activity>
+        <activity
+            android:name=".MainActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".SklActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".MarketActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".ClgActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".UniversityActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".HospitalActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".DiaActivity"
+            android:parentActivityName=".MainActivity" />
+        -->
+        <activity
+            android:name=".ResActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity android:name=".TourActivity" android:parentActivityName=".MainActivity"></activity>
     </application>
 
 </manifest>

@@ -10,24 +10,28 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 /**
- * Created by R.R on 4/10/2017.
+ * Created by R.R on 4/12/2017.
  */
 
-public class Versity extends BaseAdapter {
+public class Pathology extends BaseAdapter{
 
-    String versity[];
-    int picture[];
+
+    String dia[];
+    int pic_of_dia[];
     LayoutInflater inflater;
-    public Versity(Context context,String[]versity,int[]picture){
-        this.versity=versity;
-        this.picture=picture;
+    public Pathology(Context context, String[]dia, int[]pic_of_dia){
+        this.dia=dia;
+        this.pic_of_dia=pic_of_dia;
         inflater=(LayoutInflater.from(context));
+
     }
+
+
 
 
     @Override
     public int getCount() {
-        return versity.length;
+        return dia.length;
     }
 
     @Override
@@ -42,15 +46,16 @@ public class Versity extends BaseAdapter {
 
     @Override
     public View getView(int position, View view, ViewGroup parent) {
-
-
-        view=inflater.inflate(R.layout.versity_item,parent,false);
-        TextView textView=(TextView)view.findViewById(R.id.textViewUni);
-        ImageView imageView= (ImageView)view.findViewById(R.id.imageViewUni);
-        textView.setText(versity[position]);
+        view=inflater.inflate(R.layout.pathology_item,parent,false);
+        TextView textView=(TextView)view.findViewById(R.id.textView3);
+        ImageView imageView= (ImageView)view.findViewById(R.id.imageView3);
+        textView.setText(dia[position]);
         textView.setTextColor(Color.RED);
-        imageView.setImageResource(picture[position]);
+        imageView.setImageResource(pic_of_dia[position]);
 
         return view;
-}
+
+
+
+    }
 }

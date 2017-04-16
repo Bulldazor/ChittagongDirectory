@@ -10,24 +10,29 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 /**
- * Created by R.R on 4/10/2017.
+ * Created by R.R on 4/12/2017.
  */
 
-public class Versity extends BaseAdapter {
+public class Res extends BaseAdapter {
 
-    String versity[];
-    int picture[];
+    String res[];
+    int pic_of_res[];
     LayoutInflater inflater;
-    public Versity(Context context,String[]versity,int[]picture){
-        this.versity=versity;
-        this.picture=picture;
+    public Res(Context context, String[]res, int[]pic_of_res){
+        this.res=res;
+        this.pic_of_res=pic_of_res;
         inflater=(LayoutInflater.from(context));
+
     }
+
+
+
+
 
 
     @Override
     public int getCount() {
-        return versity.length;
+        return res.length;
     }
 
     @Override
@@ -42,15 +47,15 @@ public class Versity extends BaseAdapter {
 
     @Override
     public View getView(int position, View view, ViewGroup parent) {
-
-
-        view=inflater.inflate(R.layout.versity_item,parent,false);
-        TextView textView=(TextView)view.findViewById(R.id.textViewUni);
-        ImageView imageView= (ImageView)view.findViewById(R.id.imageViewUni);
-        textView.setText(versity[position]);
+        view=inflater.inflate(R.layout.res,parent,false);
+        TextView textView=(TextView)view.findViewById(R.id.textViewRes);
+        ImageView imageView= (ImageView)view.findViewById(R.id.imageViewRes);
+        textView.setText(res[position]);
         textView.setTextColor(Color.RED);
-        imageView.setImageResource(picture[position]);
+        imageView.setImageResource(pic_of_res[position]);
 
         return view;
-}
+
+
+    }
 }
